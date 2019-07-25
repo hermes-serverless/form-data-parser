@@ -1,0 +1,63 @@
+{
+  "name": "@hermes-serverless/form-data-parser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "test": "jest --logHeapUsage",
+    "build": "rm -rf build && yarn tsc",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "format": "prettier --config ./prettier.config.js --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "preversion": "yarn lint && yarn format",
+    "version": "git add --all",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hermes-serverless/form-data-parser.git"
+  },
+  "author": "Tiago Nápoli <napoli.tiago96@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hermes-serverless/form-data-parser/issues"
+  },
+  "homepage": "https://github.com/hermes-serverless/form-data-parser#readme",
+  "dependencies": {
+    "@hermes-serverless/custom-promises": "^0.1.0",
+    "@hermes-serverless/fs-utils": "^0.0.2",
+    "@hermes-serverless/stream-utils": "^0.2.0",
+    "@types/busboy": "^0.2.3",
+    "@types/express": "^4.17.0",
+    "@types/on-finished": "^2.3.1",
+    "busboy": "^0.3.1",
+    "on-finished": "^2.3.0",
+    "ramda": "^0.26.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/form-data": "^2.5.0",
+    "@types/jest": "^24.0.11",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^12.6.1",
+    "@types/ramda": "^0.26.18",
+    "@types/winston": "^2.4.4",
+    "execa": "^2.0.3",
+    "form-data": "^2.5.0",
+    "get-stream": "^5.1.0",
+    "jest": "^24.7.1",
+    "moment": "^2.24.0",
+    "prettier": "^1.17.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  }
+}
