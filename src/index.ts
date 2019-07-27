@@ -12,8 +12,17 @@ import {
 import FieldHandler from './handlers/FieldHandler'
 import PersistHandler from './handlers/PersistHandler'
 import RealTimeStreamHandler from './handlers/RealTimeStreamHandler'
-import { BusboyLimits } from './typings'
 import { Logger } from './utils/Logger'
+
+export interface BusboyLimits {
+  fieldNameSize?: number
+  fieldSize?: number
+  fields?: number
+  fileSize?: number
+  files?: number
+  parts?: number
+  headerPairs?: number
+}
 
 interface FormDataParserOptions {
   partsToPersist?: string[]

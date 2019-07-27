@@ -1,7 +1,11 @@
+import { BusboyLimits } from '..'
 import { FieldnameSizeExceeded, TruncatedField } from '../errors'
-import { BusboyLimits, Field } from '../typings'
 import { Logger } from '../utils/Logger'
 import { Handler } from './Handler'
+
+export interface Field {
+  [field: string]: string
+}
 
 interface FieldHandlerConstructorArgs {
   fieldsToReturn?: string[]

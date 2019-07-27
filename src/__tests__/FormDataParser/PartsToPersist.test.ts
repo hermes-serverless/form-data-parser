@@ -6,7 +6,7 @@ import os from 'os'
 import path from 'path'
 import FormDataParser from '../..'
 import { FieldnameSizeExceeded, FileSizeLimit, ParsingErrors, TruncatedField } from '../../errors'
-import { FileInfo } from '../../typings'
+import { FileInfo } from '../../handlers/PersistHandler'
 import { Logger } from '../../utils/Logger'
 import { fixture, getFormData, MB } from './util'
 

@@ -1,9 +1,16 @@
 import { StringStream } from '@hermes-serverless/stream-utils'
+import { BusboyLimits } from '..'
 import { FieldnameSizeExceeded, FileSizeExceeded, TruncatedField } from '../errors'
 import FileUploader from '../resources/FileUploader'
-import { BusboyLimits, FileInfo, ReadableWithTruncatedFlag } from '../typings'
+import { ReadableWithTruncatedFlag } from '../typings'
 import { Logger } from '../utils/Logger'
 import { Handler } from './Handler'
+
+export interface FileInfo {
+  name: string
+  size: number
+  filePath: string
+}
 
 interface PersistHandlerConstructorArgs {
   busboyLimits: BusboyLimits

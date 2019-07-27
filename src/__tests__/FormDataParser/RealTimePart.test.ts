@@ -8,7 +8,7 @@ import path from 'path'
 import { PassThrough } from 'stream'
 import FormDataParser from '../../'
 import { FieldnameSizeExceeded, InvalidRealTimeOptions, ParsingErrors } from '../../errors'
-import { FileInfo } from '../../typings'
+import { FileInfo } from '../../handlers/PersistHandler'
 import { Logger } from '../../utils/Logger'
 import { fixture, getFormData } from './util'
 

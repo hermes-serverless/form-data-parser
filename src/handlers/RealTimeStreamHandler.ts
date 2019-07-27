@@ -1,6 +1,7 @@
 import { Readable } from 'stream'
+import { BusboyLimits } from '..'
 import { FieldnameSizeExceeded, FileSizeExceeded, InvalidFormDataOrder } from '../errors'
-import { BusboyLimits, ReadableWithTruncatedFlag } from '../typings'
+import { ReadableWithTruncatedFlag } from '../typings'
 import { Logger } from '../utils/Logger'
 import { Handler } from './Handler'
 
