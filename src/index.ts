@@ -1,4 +1,5 @@
 import { Waiter } from '@hermes-serverless/custom-promises'
+import { drainStream } from '@hermes-serverless/stream-utils'
 import Busboy from 'busboy'
 import { Request } from 'express'
 import { Readable } from 'stream'
@@ -29,10 +30,6 @@ interface FormDataParserOptions {
   fieldsToReturn?: string[]
   realTimePart?: string
   limits?: BusboyLimits
-}
-
-export const drainStream = (stream: Readable) => {
-  stream.on('readable', stream.read.bind(stream))
 }
 
 export default class FormDataParser {
